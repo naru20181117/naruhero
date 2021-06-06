@@ -1,5 +1,7 @@
 # naruhero
 
+**Netlify Status**
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ba05d816-cc6f-4c3e-b25b-dbfcfdd33af6/deploy-status)](https://app.netlify.com/sites/naruhero/deploys)
 ## Build Setup
 
 ```bash
