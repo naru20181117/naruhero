@@ -5,8 +5,7 @@ const { getConfigForKeys } = require('./lib/config.js')
 const ctfConfig = getConfigForKeys([
   'CTF_BLOG_POST_TYPE_ID',
   'CTF_SPACE_ID',
-  'CTF_CDA_ACCESS_TOKEN',
-  'GOOGLE_ANALYTICS_ID'
+  'CTF_CDA_ACCESS_TOKEN'
 ])
 
 const { createClient } = require('./plugins/contentful.js')
@@ -55,7 +54,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ['@nuxtjs/google-analytics', {id: ctfConfig.GOOGLE_ANALYTICS_ID}]
+    ['@nuxtjs/google-analytics', {id: process.env.GOOGLE_ANALYTICS_ID}]
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -103,7 +102,7 @@ export default {
     id: process.env.GOOGLE_ANALYTICS_ID,
     publicRuntimeConfig: {
       googleAnalytics: {
-        id: ctfConfig.GOOGLE_ANALYTICS_ID
+        id: process.env.GOOGLE_ANALYTICS_ID
       }
     }
   }
