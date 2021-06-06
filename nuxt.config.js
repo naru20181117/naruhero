@@ -5,7 +5,8 @@ const { getConfigForKeys } = require('./lib/config.js')
 const ctfConfig = getConfigForKeys([
   'CTF_BLOG_POST_TYPE_ID',
   'CTF_SPACE_ID',
-  'CTF_CDA_ACCESS_TOKEN'
+  'CTF_CDA_ACCESS_TOKEN',
+  'GOOGLE_ANALYTICS_ID'
 ])
 
 const { createClient } = require('./plugins/contentful.js')
@@ -100,7 +101,7 @@ export default {
     id: process.env.GOOGLE_ANALYTICS_ID,
     publicRuntimeConfig: {
       googleAnalytics: {
-        id: process.env.GOOGLE_ANALYTICS_ID
+        id: ctfConfig.GOOGLE_ANALYTICS_ID
       }
     }
   }
