@@ -23,7 +23,10 @@ export default {
   },
   asyncData({ env, params }) {
     return client
-      .getEntries(env.CTF_BLOG_POST_TYPE_ID)
+      .getEntries({
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
+        order: "-sys.updatedAt"
+        })
       .then(entries => {
         return {
           posts: entries.items
