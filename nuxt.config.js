@@ -61,9 +61,12 @@ export default {
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
+    font: {
+      family: 'Libre Baskerville'
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      light: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -73,6 +76,12 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+        },
+        light: {
+          n_orange: '#e65b20',
+          n_gray: '#d1cbc3',
+          n_white: '#f7f4f2',
+          n_brown: '#3e1300',
         },
       },
     },
@@ -101,3 +110,4 @@ export default {
     breaks: true
   },
 }
+

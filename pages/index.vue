@@ -6,6 +6,7 @@
       :key="i"
       :title="post.fields.title"
       :id="post.sys.id"
+      :image_url="post.fields.postImage.fields.file.url"
       :date="post.sys.updatedAt"
     />
   </section>
@@ -29,10 +30,25 @@ export default {
         })
       .then(entries => {
         return {
-          posts: entries.items
+          posts: entries.items,
         }
       })
       .catch(console.error)
   }
 }
 </script>
+
+<style scoped>
+.color {
+  background-color: #e65b20;
+}
+.color2 {
+  background-color: #d1cbc3;
+}
+.color3 {
+  background-color: #f7f4f2;
+}
+.color4 {
+  background-color: #3e1300;
+}
+</style>

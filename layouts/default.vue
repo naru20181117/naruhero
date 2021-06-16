@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app light>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -89,3 +89,25 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+body {
+  color: #3e1300;
+}
+#__nuxt {
+  color: #e65b20;
+}
+#app {
+  color: #3e1300;
+}
+
+.v-application {
+  background-color: #d1cbc3;
+}
+
+.body {
+  img {
+    max-width: 500px!important;
+  }
+}
+</style>

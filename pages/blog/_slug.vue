@@ -12,7 +12,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <img :src="image.file.url" :alt="image.title" width="300" class="thumbnail">
+      <img :src="image.file.url" :alt="image.title" class="thumbnail">
     </div>
   </section>
 </template>
