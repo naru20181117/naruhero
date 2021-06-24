@@ -26,7 +26,7 @@ export default {
     return client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-sys.updatedAt"
+        order: "-sys.createdAt"
         })
       .then(entries => {
         return {

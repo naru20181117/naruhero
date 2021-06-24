@@ -1,9 +1,10 @@
 <template>
-  <section class="slug">
-    <h1 class="slug_title">
+  <section class="id">
+    <h1 class="content_title">
       {{ article.fields.title }}
     </h1>
-    <p class="slug_date">{{ article.sys.updatedAt }}</p>
+    <img :src="image.file.url" :alt="image.title" class="thumbnail">
+    <p class="content_date">{{ article.sys.updatedAt }}</p>
     <div>
       <v-list>
         <v-list-item>
@@ -12,7 +13,6 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <img :src="image.file.url" :alt="image.title" class="thumbnail">
     </div>
   </section>
 </template>
@@ -44,20 +44,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.slug_title {
-  margin-top: 40px;
-  font-weight: bold;
-  font-size: 32px;
-}
-.slug_date {
-  font-size: 14px;
-  color: #333;
-  margin-top: 16px;
-}
-.body {
-  margin: 24px 0 80px;
-}
-.link {
-  display: block;
+.id {
+  img {
+    max-width: 300px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .content_title {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  .content_date {
+    font-size: 14px;
+    color: #333;
+    margin-top: 16px;
+  }
+  .body {
+    margin: 24px 0 80px;
+  }
+  .link {
+    display: block;
+  }
 }
 </style>

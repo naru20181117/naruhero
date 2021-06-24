@@ -1,7 +1,7 @@
 <template>
   <article class="card">
     <nuxt-link
-      :to="{ name: 'blog-slug', params: {
+      :to="{ name: 'blog-id', params: {
         sys: id
       }}"
       class="wrapper"
