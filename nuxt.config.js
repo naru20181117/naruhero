@@ -108,7 +108,13 @@ export default {
 
   markdownit: {
     injected: true,
-    breaks: true
+    breaks: true,
+    html: true,
+    linkify: true,
+    typography: true,
+    use: [
+      'markdown-it-br'
+    ]
   },
 }
 
