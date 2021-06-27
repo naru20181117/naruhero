@@ -113,7 +113,16 @@ export default {
     linkify: true,
     typography: true,
     use: [
-      'markdown-it-br'
+      'markdown-it-br',
+      [
+        'markdown-it-link-attributes',
+        {
+          attrs: {
+            target: '_blank',
+            rel: 'noopener'
+          }
+        }
+      ]
     ]
   },
 }
