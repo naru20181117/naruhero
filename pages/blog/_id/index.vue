@@ -28,10 +28,11 @@ export default {
     },
   },
   transition: 'slide-right',
-  async asyncData({ env, params, query }) {
+  async asyncData({ env, params }) {
     return await client
-      .getEntry('2CarS17naZgKwFsQiKc8F2')
+      .getEntry(params.id)
       .then(entrie => {
+        console.log(params)
         console.log(entrie)
         return {
           article: entrie,
