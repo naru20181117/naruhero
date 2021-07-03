@@ -95,7 +95,7 @@ export default {
       return cdaClient
         .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
         .then(entries => {
-          return [...entries.items.map(entry => `/blog/${entry.fields.id}`)]
+          return [...entries.items.map(entry => `/blog/${entry.sys.id}`)]
           // todo routing setting with id
         })
     }
