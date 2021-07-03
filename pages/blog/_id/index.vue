@@ -32,6 +32,7 @@ export default {
     return await client
       .getEntry(params.id)
       .then(entrie => {
+        console.log(entrie)
         return {
           article: entrie,
           body: entrie.fields.body,
