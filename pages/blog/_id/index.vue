@@ -30,7 +30,7 @@ export default {
   transition: 'slide-right',
   async asyncData({ env, params, query }) {
     return await client
-      .getEntry(params.id)
+      .getEntry('2CarS17naZgKwFsQiKc8F2')
       .then(entrie => {
         console.log(entrie)
         return {
