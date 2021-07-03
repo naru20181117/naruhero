@@ -1,11 +1,6 @@
 <template>
   <article class="card">
-    <nuxt-link
-      :to="{ name: 'blog-id', params: {
-        sys: id
-      }}"
-      class="wrapper"
-    >
+    <nuxt-link :to="{ path: `/blog/${id}`}" class="wrapper">
     <article class="card">
       <v-row>
         <v-col

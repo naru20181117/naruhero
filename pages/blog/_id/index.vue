@@ -25,12 +25,12 @@ export default {
     id: {
       type: String,
       default: ''
-    }
+    },
   },
   transition: 'slide-right',
-  async asyncData({ env, params }) {
+  async asyncData({ env, params, query }) {
     return await client
-      .getEntry(params.sys)
+      .getEntry(params.id)
       .then(entrie => {
         return {
           article: entrie,
