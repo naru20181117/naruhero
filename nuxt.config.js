@@ -17,6 +17,7 @@ export default {
   ssr: false,
 
   // Target (https://go.nuxtjs.dev/config-target)
+  mode: 'universal',
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -89,6 +90,10 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  router: {
+    middleware: 'sample'
+  },
 
   generate: {
     routes() {

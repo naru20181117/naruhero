@@ -29,10 +29,10 @@ export default {
   },
   transition: 'slide-right',
   async asyncData (route) {
+    console.log(route.params.id)
     return await client
       .getEntry(route.params.id)
       .then(entrie => {
-        console.log(entrie.fields)
         return {
           post: entrie.fields,
           image: entrie.fields.postImage.fields,
