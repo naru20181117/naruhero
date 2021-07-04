@@ -29,9 +29,10 @@ export default {
   },
   transition: 'slide-right',
   async asyncData (route) {
-    console.log(route.params.id)
+    // console.log(route.params.id)
     return await client
-      .getEntry(route.params.id)
+      .getEntry('2CarS17naZgKwFsQiKc8F2')
+      // .getEntry(route.params.id)
       .then(entrie => {
         return {
           post: entrie.fields,
