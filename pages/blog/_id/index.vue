@@ -56,6 +56,9 @@ export default {
 
 <style lang="scss" scoped>
 .id {
+  max-width: 80%;
+  margin: 0 auto;
+
   img {
     max-width: 300px;
     max-height: 100%;
