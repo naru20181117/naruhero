@@ -14,9 +14,9 @@
 
 <script>
 import Card from '~/components/card.vue'
+import { createClient } from '~/plugins/contentful.js'
 import { mapState } from 'vuex'
 
-const client = createClient()
 export default {
   transition: 'slide-left',
   components: {
