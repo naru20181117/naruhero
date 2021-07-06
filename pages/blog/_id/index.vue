@@ -3,8 +3,8 @@
     <h1 class="content_title">
       {{ post.title }}
     </h1>
-    <img :src="image.file.url" :alt="image.title" class="thumbnail">
-    <p class="content_date">{{ getFormattedDate(updated_at) }}</p>
+    <img :src="post.image.file.url" :alt="post.image.title" class="thumbnail">
+    <p class="content_date">{{ getFormattedDate(post.updated_at) }}</p>
     <div>
       <v-list>
         <v-list-item>
@@ -18,6 +18,7 @@
 </template>
 <script>
 import { createClient } from '~/plugins/contentful.js'
+import { mapState } from 'vuex'
 
 const client = createClient()
 export default {
@@ -28,20 +29,20 @@ export default {
     }
   },
   transition: 'slide-right',
-  async asyncData (route) {
-    // console.log(route.params.id)
-    return await client
-      .getEntry('2CarS17naZgKwFsQiKc8F2')
-      // .getEntry(route.params.id)
-      .then(entrie => {
+  computed: {
+    ...mapState(['posts', this]),
+      post () {
+        const item = this.posts.find(
+          post => post.fields.id == this.$route.params.id,
+        )
         return {
-          post: entrie.fields,
-          image: entrie.fields.postImage.fields,
-          updated_at: entrie.sys.updatedAt,
+          title: item.fields.title,
+          body: item.fields.body,
+          image: item.fields.postImage.fields,
+          updated_at: item.sys.updatedAt,
         }
-      })
-      .catch(console.error)
-  },
+      }
+    },
   methods: {
     getFormattedDate (date) {
       const originDate = new Date(date)

@@ -22,8 +22,8 @@
               <v-icon light> mdi-repeat </v-icon>
             </v-list-item-action>
             <v-list-item
-              v-for="(item, i) in items"
-              :key="i"
+              v-for="(item, x) in items"
+              :key="x"
               :to="item.to"
               router
               exact
@@ -36,8 +36,8 @@
               </v-list-item-content>
             </v-list-item>
             <v-list-item
-              v-for="(out_items, i) in out_items"
-              :key="i"
+              v-for="(out_items, y) in out_items"
+              :key="y"
               :href="out_items.url"
               target="_blank"
               router

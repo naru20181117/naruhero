@@ -92,9 +92,23 @@ export default {
   build: {},
 
   router: {
-    middleware: 'sample'
+    middleware: 'getPosts'
   },
-
+  // generate: {
+  //   routes () {
+  //     return Promise.all([
+  //       sdkClient.getEntries({
+  //         content_type: 'blogPost'
+  //       })
+  //     ]).then(([posts]) => {
+  //       return [
+  //         ...posts.items.map((post) => {
+  //           return { route: `posts/${post.fields.slug}`, payload: post }
+  //         })
+  //       ]
+  //     })
+  //   }
+  // },
   generate: {
     fallback: true,
     routes() {

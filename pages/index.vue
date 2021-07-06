@@ -14,7 +14,7 @@
 
 <script>
 import Card from '~/components/card.vue'
-import { createClient } from '~/plugins/contentful.js'
+import { mapState } from 'vuex'
 
 const client = createClient()
 export default {
@@ -22,19 +22,9 @@ export default {
   components: {
     Card
   },
-  asyncData({ env, params }) {
-    return client
-      .getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-sys.createdAt"
-        })
-      .then(entries => {
-        return {
-          posts: entries.items,
-        }
-      })
-      .catch(console.error)
-  }
+  computed: {
+    ...mapState(['posts'])
+  },
 }
 </script>
 
