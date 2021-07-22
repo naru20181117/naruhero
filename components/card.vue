@@ -1,6 +1,7 @@
 <template>
   <article class="card">
-    <nuxt-link :to="{ path: `/blog/${id}`}" class="wrapper">
+    <!-- <nuxt-link :to="{ path: `/blog/${id}`}" class="wrapper"> -->
+    <nuxt-link :to="linkTo(id)">
     <article class="card">
       <v-row>
         <v-col
@@ -63,6 +64,11 @@ export default {
     date: {
       type: String,
       default: ''
+    }
+  },
+  methods: {
+    linkTo (id) {
+      return { name: 'blog-id', params: { id: id } }
     }
   }
 }

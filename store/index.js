@@ -22,8 +22,6 @@ export const actions = {
       order: '-sys.createdAt'
     })
       .then((res) => {
-        console.log(res)
-        console.log(res.items)
         commit('setPosts', res.items)
       })
       .catch(console.error)

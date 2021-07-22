@@ -9,7 +9,7 @@
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <div class="body" v-html="$md.render(post.body)"></div>
+            <div class="body" v-html="$md.render(post.body)"/>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -66,17 +66,55 @@ export default {
     object-fit: cover;
   }
   .content_title {
-    margin-top: 40px;
+    margin: 2rem 1rem 1rem;
     font-weight: bold;
     font-size: 32px;
   }
   .content_date {
     font-size: 14px;
-    color: #333;
+    color: #e65b20;
     margin-top: 16px;
   }
   .body {
     margin: 24px 0 80px;
+    padding: 0 3rem;
+    color: #3e1300;
+    line-height: 130%;
+
+    ::v-deep {
+      h1, h2, h3, h4 {
+        // margin: 1rem 0;
+        line-height: 120%;
+      }
+      h1, h2 {
+        margin: 2.5rem 0 1rem;
+      }
+      h3, h4 {
+        margin: 1.5rem 0 1rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 2rem !important;
+      }
+      table, th, td {
+        border: 1px solid;
+      }
+      th {
+        background-color: #d1cbc3;
+      }
+      img {
+        max-height: 300px;
+        padding: 1rem;
+      }
+      blockquote {
+        max-width: 50%;
+        p {
+          background-color: #f2f2f2;
+          padding: 1rem;
+        }
+      }
+    }
+
   }
   .link {
     display: block;
