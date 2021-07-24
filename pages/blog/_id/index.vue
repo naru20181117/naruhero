@@ -22,6 +22,17 @@ import { mapState } from 'vuex'
 
 const client = createClient()
 export default {
+  // ここから
+  head() {
+    return {
+      meta: [
+        { hid: 'og:description', property: 'og:description', content: 'ディスクリプション' },
+        { hid: 'og:url', property: 'og:url', content: 'ページのURL' },
+        { hid: 'og:image', property: 'og:image', content: '画像のURL' },
+      ]
+    }
+  },
+  // ここまで
   props: {
     id: {
       type: String,

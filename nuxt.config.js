@@ -22,12 +22,27 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    // ここから
+    htmlAttrs: {
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
+    },
+    // ここまで
     titleTemplate: '%s - naruhero',
     title: 'naruhero',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
+      // ここから
+      { hid: 'og:site_name', property: 'og:site_name', content: 'サイト名' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'サイトのURL' },
+      { hid: 'og:title', property: 'og:title', content: 'サイトタイトル' },
+      { hid: 'og:description', property: 'og:description', content: '共通ディスクリプション' },
+      { hid: 'og:image', property: 'og:image', content: '画像のURL' },
+      { name: 'twitter:card', content: 'summary' },
+      // ここまで
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
