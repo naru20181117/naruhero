@@ -1,6 +1,5 @@
 <template>
   <article class="card">
-    <!-- <nuxt-link :to="{ path: `/blog/${id}`}" class="wrapper"> -->
     <nuxt-link :to="linkTo(id)">
     <article class="card">
       <v-row>
@@ -22,21 +21,26 @@
               class="justify-center"
               v-text="title"
             />
-            <!-- <v-card-text
-              :style="'font-size:0.9rem'"
-              height="100%"
-              v-html="id"
-            /> -->
+            <v-card-text :style="'font-size:0.9rem'" height="100%">
+              {{$moment(date).format('YYYY/MM/DD')}}
+            </v-card-text>
             <v-spacer />
             <v-card-actions class="mb-7">
-              <v-btn
+              <template v-if="slide_post">
+                <v-btn
+                  block elevation="9" large class="mb-4 orange-color-back"
+                  :href="url + '?entry_id=' + entry_id" target='_blank'>
+                  スライドで確認する
+                </v-btn>
+              </template>
+              <!-- <v-btn
                 text
                 color="primary"
                 class="mb-5"
                 :style="'font-size:1.0rem'"
               >
-                <span class="justify-center">{{ date }}</span>
-              </v-btn>
+                <span class="justify-center">{{ $moment(date).format("YYYY/MM/DD") }}</span>
+              </v-btn> -->
             </v-card-actions>
           </v-card>
         </v-col>
@@ -48,6 +52,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      url: 'https://naruhero-blog-slide.netlify.app/'
+    }
+  },
   props: {
     title: {
       type: String,
@@ -63,6 +72,14 @@ export default {
     },
     date: {
       type: String,
+      default: ''
+    },
+    entry_id: {
+      type: String,
+      default: ''
+    },
+    slide_post: {
+      type: Boolean,
       default: ''
     }
   },

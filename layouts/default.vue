@@ -106,6 +106,19 @@ body {
   background-color: #d1cbc3;
 }
 
+.orange-color {
+  background-color: #e65b20;
+}
+.color2 {
+  background-color: #d1cbc3;
+}
+.color3 {
+  background-color: #f7f4f2;
+}
+.color4 {
+  background-color: #3e1300;
+}
+
 // .v-list-item {
 //   width: 100%;
 // }

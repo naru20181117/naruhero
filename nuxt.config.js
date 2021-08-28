@@ -48,7 +48,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['@/assets/common.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -69,7 +69,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['@nuxtjs/google-analytics', { id: process.env.GOOGLE_ANALYTICS_ID }],
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    ['@nuxtjs/moment', ['ja']]
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -80,7 +81,7 @@ export default {
     font: {
       family: 'Libre Baskerville'
     },
-    customVariables: ['~/assets/variables.scss'],
+    // customVariables: ['~/assets/common.scss'],
     theme: {
       light: true,
       themes: {

@@ -4,11 +4,11 @@
       {{ post.title }}
     </h1>
     <img :src="post.image.file.url" :alt="post.image.title" class="thumbnail">
-    <p class="content_date">{{ getFormattedDate(post.updated_at) }}</p>
+    <p class="content_date">{{ $moment(post.updated_at).format("YYYY/MM/DD") }}</p>
     <p><nuxt-link :to="url + '?entry_id=' + post.entry_id" /></p>
     <template v-if="post.slide_post">
       <v-btn
-        block elevation="9" large class="mb-4 orange-color"
+        block elevation="9" large class="mb-4 orange-color-back"
         :href="url + '?entry_id=' + post.entry_id" target='_blank'>
         スライドで確認する
       </v-btn>
@@ -30,7 +30,6 @@ import { mapState } from 'vuex'
 
 const client = createClient()
 export default {
-  // ここから
   head() {
     return {
       meta: [
@@ -40,7 +39,6 @@ export default {
       ]
     }
   },
-  // ここまで
   props: {
     id: {
       type: String,
@@ -55,29 +53,20 @@ export default {
   transition: 'slide-right',
   computed: {
     ...mapState(['posts', this]),
-      post () {
-        const item = this.posts.find(
-          post => post.fields.id == this.$route.params.id,
-        )
-        return {
-          title: item.fields.title,
-          body: item.fields.body,
-          image: item.fields.postImage.fields,
-          updated_at: item.sys.updatedAt,
-          entry_id: item.sys.id,
-          slide_post: item.fields.slidePost
-        }
+    post () {
+      const item = this.posts.find(
+        post => post.fields.id == this.$route.params.id,
+      )
+      return {
+        title: item.fields.title,
+        body: item.fields.body,
+        image: item.fields.postImage.fields,
+        updated_at: item.sys.updatedAt,
+        entry_id: item.sys.id,
+        slide_post: item.fields.slidePost
       }
-    },
-  methods: {
-    getFormattedDate (date) {
-      const originDate = new Date(date)
-      const year = originDate.getFullYear()
-      const month = originDate.getMonth() + 1
-      const day = originDate.getDate()
-      return `${year}年${month}月${day}日`
     }
-  }
+  },
 }
 </script>
 
@@ -100,10 +89,6 @@ export default {
     font-size: 14px;
     color: #e65b20;
     margin-top: 16px;
-  }
-  .orange-color {
-    color: #f2f2f2;
-    background-color: #e65b20;
   }
   .body {
     margin: 24px 0 80px;
