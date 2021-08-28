@@ -22,27 +22,23 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    // ここから
     htmlAttrs: {
       lang: 'ja',
       prefix: 'og: http://ogp.me/ns#'
     },
-    // ここまで
     titleTemplate: '%s - naruhero',
-    title: 'naruhero',
+    title: 'Naruhe.log',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      // ここから
-      { hid: 'og:site_name', property: 'og:site_name', content: 'サイト名' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'NARUHI.log' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'サイトのURL' },
-      { hid: 'og:title', property: 'og:title', content: 'サイトタイトル' },
-      { hid: 'og:description', property: 'og:description', content: '共通ディスクリプション' },
-      { hid: 'og:image', property: 'og:image', content: '画像のURL' },
+      { hid: 'og:url', property: 'og:url', content: 'http://naruhero.site/' },
+      { hid: 'og:title', property: 'og:title', content: 'Naruhi.log' },
+      { hid: 'og:description', property: 'og:description', content: '技術とマニアックな趣味のブログ' },
+      { hid: 'og:image', property: 'og:image', content: 'https://res.cloudinary.com/dnltqdyfu/image/authenticated/s--36gs0n6e--/v1630146867/Myicon.jpg' },
       { name: 'twitter:card', content: 'summary' },
-      // ここまで
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },

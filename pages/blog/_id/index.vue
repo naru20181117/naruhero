@@ -30,12 +30,19 @@ import { mapState } from 'vuex'
 
 const client = createClient()
 export default {
+  data() {
+    return {
+      url: 'https://naruhero-blog-slide.netlify.app/',
+    }
+  },
   head() {
     return {
       meta: [
-        { hid: 'og:description', property: 'og:description', content: 'ディスクリプション' },
-        { hid: 'og:url', property: 'og:url', content: 'ページのURL' },
-        { hid: 'og:image', property: 'og:image', content: '画像のURL' },
+        // { hid: 'og:description', property: 'og:description', content: '個別ディスクリプション' },
+        // { hid: 'description', property: 'description', content: '個別' },
+        { hid: 'og:url', property: 'og:url', content: window.location.href },
+        { hid: 'og:image', property: 'og:image', content: this.post.image.file.url },
+        { hid: 'og:title', property: 'og:title', content: this.post.title },
       ]
     }
   },
@@ -43,11 +50,6 @@ export default {
     id: {
       type: String,
       default: ''
-    }
-  },
-  data() {
-    return {
-      url: 'https://naruhero-blog-slide.netlify.app/'
     }
   },
   transition: 'slide-right',
