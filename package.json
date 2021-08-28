@@ -15,10 +15,12 @@
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxtjs/moment": "^1.6.1",
     "contentful": "^8.4.2",
     "core-js": "^3.15.2",
     "markdown-it-br": "^1.0.0",
     "markdown-it-link-attributes": "^3.0.0",
+    "moment": "^2.29.1",
     "nuxt": "^2.15.7",
     "reveal.js": "^4.1.3"
   },
