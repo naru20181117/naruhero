@@ -1,27 +1,63 @@
 <template>
-  <section class="id">
-    <h1 class="content_title">
-      {{ post.title }}
-    </h1>
-    <img :src="post.image.file.url" :alt="post.image.title" class="thumbnail">
-    <p class="content_date">{{ $moment(post.updated_at).format("更新日 YYYY/MM/DD") }}</p>
-    <p><nuxt-link :to="url + '?entry_id=' + post.entry_id" /></p>
-    <template v-if="post.slide_post">
-      <v-btn
-        block elevation="9" large class="mb-4 orange-color-back"
-        :href="url + '?entry_id=' + post.entry_id" target='_blank'>
-        スライドで確認する
-      </v-btn>
-    </template>
-    <div>
-      <v-list>
-        <v-list-item>
-          <v-list-item-content>
+  <section>
+    <v-container class="id">
+      <h1 class="content_title">
+        {{ post.title }}
+      </h1>
+      <img :src="post.image.file.url" :alt="post.image.title" class="thumbnail mb-1">
+      <template v-if="post.slide_post">
+        <v-btn
+          block elevation="9" large class="mb-4 orange-color-back"
+          :href="url + '?entry_id=' + post.entry_id" target='_blank'>
+          スライドで確認する
+        </v-btn>
+      </template>
+      <v-row>
+        <!-- <v-col
+          cols="12"
+          sm="2"
+        >
+          <v-sheet
+            rounded="lg"
+            min-height="268"
+          >
+
+          </v-sheet>
+        </v-col> -->
+
+        <v-col
+          cols="12"
+          sm="9"
+        >
+          <v-sheet
+            min-height="70vh"
+            rounded="lg"
+          >
             <div class="body" v-html="$md.render(post.body)"/>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </div>
+          </v-sheet>
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="3"
+        >
+          <v-sheet
+            rounded="lg"
+            min-height="268"
+          >
+            <p class="content_date">{{ $moment(post.updated_at).format("更新日 YYYY/MM/DD") }}</p>
+            <v-btn
+              :href="'https://twitter.com/intent/tweet?text=' + post.title + '&url=https://naruhero.site/blog/' + post.id"
+              color="info" block large elevation="5" target='_blank'>
+              <v-icon large>
+                mdi-twitter
+              </v-icon>
+                　\  シェア  /
+            </v-btn>
+          </v-sheet>
+        </v-col>
+      </v-row>
+    </v-container>
   </section>
 </template>
 <script>
@@ -65,7 +101,8 @@ export default {
         image: item.fields.postImage.fields,
         updated_at: item.sys.updatedAt,
         entry_id: item.sys.id,
-        slide_post: item.fields.slidePost
+        slide_post: item.fields.slidePost,
+        id: item.fields.id,
       }
     }
   },
@@ -74,7 +111,7 @@ export default {
 
 <style lang="scss" scoped>
 .id {
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
 
   img {
@@ -88,15 +125,13 @@ export default {
     font-size: 32px;
   }
   .content_date {
+    padding: 1rem;
     font-size: 14px;
     color: #e65b20;
-    margin-top: 16px;
   }
   .body {
-    margin: 24px 0 80px;
-    padding: 0 3rem;
+    padding: 2rem;
     color: #3e1300;
-    line-height: 130%;
 
     ::v-deep {
       h1, h2, h3, h4 {
@@ -145,16 +180,6 @@ export default {
   }
   .link {
     display: block;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .id {
-    width: 90vw;
-
-    .body {
-      padding: 0;
-    }
   }
 }
 
