@@ -4,23 +4,17 @@
       <v-app-bar-nav-icon @click.stop="miniVariant = !miniVariant" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-app-bar-nav-icon icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${right ? 'right' : 'left'}` }}</v-icon>
-      </v-app-bar-nav-icon>
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer v-model="miniVariant" :right="right" temporary fixed>
+    <v-navigation-drawer v-model="miniVariant" temporary fixed>
       <v-list>
-        <v-list-item @click.native="right = !right">
+        <v-list-item>
           <span></span>
           <v-list>
-            <v-list-item-action>
-              <v-icon light> mdi-repeat </v-icon>
-            </v-list-item-action>
             <v-list-item
               v-for="(item, x) in items"
               :key="x"
@@ -84,7 +78,6 @@ export default {
         },
       ],
       miniVariant: false,
-      right: true,
       title: 'Naruhe.log',
     }
   },
