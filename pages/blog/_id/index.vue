@@ -4,7 +4,7 @@
       {{ post.title }}
     </h1>
     <img :src="post.image.file.url" :alt="post.image.title" class="thumbnail">
-    <p class="content_date">{{ $moment(post.updated_at).format("YYYY/MM/DD") }}</p>
+    <p class="content_date">{{ $moment(post.updated_at).format("更新日 YYYY/MM/DD") }}</p>
     <p><nuxt-link :to="url + '?entry_id=' + post.entry_id" /></p>
     <template v-if="post.slide_post">
       <v-btn
@@ -74,13 +74,13 @@ export default {
 
 <style lang="scss" scoped>
 .id {
-  max-width: 80%;
+  width: 80vw;
   margin: 0 auto;
 
   img {
     max-width: 300px;
-    max-height: 100%;
-    object-fit: cover;
+    max-height: 400px;
+    object-fit: contain;
   }
   .content_title {
     margin: 2rem 1rem 1rem;
@@ -128,16 +128,39 @@ export default {
         p {
           background-color: #f2f2f2;
           padding: 1rem;
+          line-height: 150%;
         }
       }
       hr {
         border: none;
       }
+      li {
+        line-height: 200%;
+      }
+      p {
+          line-height: 150%;
+        }
     }
 
   }
   .link {
     display: block;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .id {
+    width: 90vw;
+
+    .body {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .id {
+    max-width: 100vw;
   }
 }
 </style>
