@@ -8,7 +8,7 @@
       <template v-if="post.slide_post">
         <v-btn
           block elevation="9" large class="mb-4 orange-color-back"
-          :href="url + '?entry_id=' + post.entry_id" target='_blank'>
+          :href="slide_url + '?entry_id=' + post.entry_id" target='_blank'>
           スライドで確認する
         </v-btn>
       </template>
@@ -68,7 +68,7 @@ const client = createClient()
 export default {
   data() {
     return {
-      url: 'https://naruhero-blog-slide.netlify.app/',
+      slide_url: 'https://naruhero-blog-slide.netlify.app/',
     }
   },
   head() {
@@ -83,6 +83,7 @@ export default {
           content:
             'サービス開発のためのブログ',
         },
+        { hid: 'og:site_name', property: 'og:site_name', content: this.post.title },
         { hid: 'og:url', property: 'og:url', content: window.location.href },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:image', property: 'og:image', content: this.post.image.file.url },
@@ -124,7 +125,7 @@ export default {
 
 <style lang="scss" scoped>
 .id {
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
 
   img {

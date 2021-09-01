@@ -125,8 +125,8 @@ export default {
   //   }
   // },
   generate: {
-    fallback: true,
-    routes() {
+    fallback: false,
+    async routes() {
       return cdaClient
         .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
         .then(entries => {
