@@ -47,7 +47,7 @@
           >
             <p class="content_date">{{ $moment(post.updated_at).format("更新日 YYYY/MM/DD") }}</p>
             <v-btn
-              :href="'https://twitter.com/intent/tweet?text=' + post.title + '&url=https://naruhero.site/blog/' + post.id"
+              :href="'https://twitter.com/intent/tweet?text=' + post.title + '&url=https://naruhero.site' + post.param"
               color="info" block large elevation="5" target='_blank'>
               <v-icon large>
                 mdi-twitter
@@ -73,10 +73,18 @@ export default {
   },
   head() {
     return {
+      title: this.post.title,
       meta: [
         // { hid: 'og:description', property: 'og:description', content: '個別ディスクリプション' },
         // { hid: 'description', property: 'description', content: '個別' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'サービス開発のためのブログ',
+        },
         { hid: 'og:url', property: 'og:url', content: window.location.href },
+        { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:image', property: 'og:image', content: this.post.image.file.url },
         { hid: 'og:title', property: 'og:title', content: this.post.title },
       ]
@@ -102,7 +110,12 @@ export default {
         updated_at: item.sys.updatedAt,
         entry_id: item.sys.id,
         slide_post: item.fields.slidePost,
-        id: item.fields.id,
+        param: this.$route.fullPath
+      }
+    },
+    url () {
+      return {
+        id: window.location
       }
     }
   },

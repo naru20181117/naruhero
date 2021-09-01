@@ -11,6 +11,10 @@ const ctfConfig = getConfigForKeys([
 const { createClient } = require('./plugins/contentful.js')
 const cdaClient = createClient(ctfConfig)
 
+const title = 'Naruhe.log'
+const description = '技術とマニアックな趣味のブログ'
+const uri = 'https://naruhero.site/'
+const image_url = 'https://res.cloudinary.com/dnltqdyfu/image/authenticated/s--36gs0n6e--/v1630146867/Myicon.jpg'
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
@@ -26,19 +30,18 @@ export default {
       lang: 'ja',
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s - naruhero',
-    title: 'Naruhe.log',
+    titleTemplate: '%s - ' + title,
+    title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'NARUHI.log' },
+      { hid: 'description', name: 'description', content: description },
+      { hid: 'og:site_name', property: 'og:site_name', content: title },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'http://naruhero.site/' },
-      { hid: 'og:title', property: 'og:title', content: 'Naruhi.log' },
-      { hid: 'og:description', property: 'og:description', content: '技術とマニアックな趣味のブログ' },
-      { hid: 'og:image', property: 'og:image', content: 'https://res.cloudinary.com/dnltqdyfu/image/authenticated/s--36gs0n6e--/v1630146867/Myicon.jpg' },
-      { name: 'twitter:card', content: 'summary' },
+      { hid: 'og:url', property: 'og:url', content: uri },
+      { hid: 'og:title', property: 'og:title', content: title },
+      { hid: 'og:image', property: 'og:image', content: image_url },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
