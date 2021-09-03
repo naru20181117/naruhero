@@ -1299,9 +1299,9 @@
     rc9 "^1.2.0"
     std-env "^2.3.0"
 
-"@nuxt/types@^2.15.7":
-  version "2.15.7"
-  resolved "https://registry.npmjs.org/@nuxt/types/-/types-2.15.7.tgz"
+"@nuxt/types@^2.15.8":
+  version "2.15.8"
+  resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-2.15.8.tgz#1249de448f68169fe17e9379ee7b5caa0eb336b0"
   dependencies:
     "@types/autoprefixer" "9.7.2"
     "@types/babel__core" "7.1.14"
