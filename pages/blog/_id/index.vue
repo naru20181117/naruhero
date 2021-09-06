@@ -170,10 +170,19 @@ export default {
       }
       img {
         max-height: 300px;
-        padding: 1rem;
+        width: 100%;
+        object-fit: scale-down;
+        object-position: 0 50%;
+        padding: 0.5rem;
       }
       blockquote {
-        max-width: 50%;
+        margin: 1em 0;
+        padding: 0.5em 0.5em 0;
+        background: #fff;
+        border: 5px solid #DBDBDB;
+        border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
         p {
           background-color: #f2f2f2;
           padding: 1rem;
@@ -189,6 +198,9 @@ export default {
       p {
           line-height: 150%;
         }
+      a {
+          word-break: break-all;
+        }
     }
 
   }
@@ -199,7 +211,8 @@ export default {
 
 @media screen and (max-width: 550px) {
   .id {
-    max-width: 100vw;
+    width: 90vw;
+    margin: 0 auto;
   }
 }
 </style>
