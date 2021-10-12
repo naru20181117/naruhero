@@ -3399,9 +3399,9 @@ contentful-sdk-core@^6.9.0:
     lodash "^4.17.21"
     qs "^6.9.4"
 
-contentful@^9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-9.0.2.tgz#fabf9aed3a0bfbd303d777ade48066b9a26e7d51"
+contentful@^9.1.2:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-9.1.2.tgz#50d12916c5dad18f6a69cbc4d8ea77d7b4947bfb"
   dependencies:
     axios "^0.22.0"
     contentful-resolve-response "^1.3.0"
