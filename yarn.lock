@@ -1506,15 +1506,16 @@
   dependencies:
     http-proxy-middleware "^1.0.6"
 
-"@nuxtjs/vuetify@^1.12.1":
-  version "1.12.1"
-  resolved "https://registry.npmjs.org/@nuxtjs/vuetify/-/vuetify-1.12.1.tgz"
+"@nuxtjs/vuetify@^1.12.3":
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-1.12.3.tgz#d4adf84e18fd474044bf971e7cc978e25eb16ba1"
+  integrity sha512-6uVL3cfESMB00eVjJTNkyU4jvuPTGPn1yteo7lQTH6v+fxHcPaOgvzVYHIKSHIz1DecuOiB5c9b+YjsRP5+C8A==
   dependencies:
     deepmerge "^4.2.2"
     sass "~1.32.13"
     sass-loader "^10.2.0"
-    vuetify "^2.5.3"
-    vuetify-loader "^1.7.2"
+    vuetify "^2.6"
+    vuetify-loader "^1.7.3"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -2200,7 +2201,7 @@ acorn-globals@^6.0.0:
     acorn "^7.1.1"
     acorn-walk "^7.1.1"
 
-acorn-jsx@^5.2.0, acorn-jsx@^5.3.1:
+acorn-jsx@^5.3.1:
   version "5.3.1"
   resolved "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.1.tgz"
 
@@ -3744,12 +3745,6 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.3.2:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
-  dependencies:
-    ms "2.1.2"
-
 decache@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npmjs.org/decache/-/decache-4.6.0.tgz"
@@ -4273,15 +4268,6 @@ eslint-plugin-unicorn@^39.0.0:
     semver "^7.3.5"
     strip-indent "^3.0.0"
 
-eslint-plugin-vue@^7.9.0:
-  version "7.13.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-7.13.0.tgz"
-  dependencies:
-    eslint-utils "^2.1.0"
-    natural-compare "^1.4.0"
-    semver "^7.3.2"
-    vue-eslint-parser "^7.8.0"
-
 eslint-plugin-vue@^8.1.1:
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-8.1.1.tgz#8bb0a40520880cdd076b4a6faf8bc29110997a8c"
@@ -4318,10 +4304,11 @@ eslint-scope@^7.1.0:
   dependencies:
     esrecurse "^4.3.0"
     estraverse "^5.2.0"
-    
-eslint-template-visitor@^2.2.2:
+
+eslint-template-visitor@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/eslint-template-visitor/-/eslint-template-visitor-2.3.2.tgz#b52f96ff311e773a345d79053ccc78275bbc463d"
+  integrity sha512-3ydhqFpuV7x1M9EK52BPNj6V0Kwu0KKkcIAfpUhwHbR8ocRln/oUHgfxQupY8O1h4Qv/POHDumb/BwwNfxbtnA==
   dependencies:
     "@babel/core" "^7.12.16"
     "@babel/eslint-parser" "^7.12.16"
@@ -4329,7 +4316,7 @@ eslint-template-visitor@^2.2.2:
     esquery "^1.3.1"
     multimap "^1.1.0"
 
-eslint-utils@^2.0.0, eslint-utils@^2.1.0:
+eslint-utils@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/eslint-utils/-/eslint-utils-2.1.0.tgz"
   dependencies:
@@ -4407,25 +4394,17 @@ eslint@^8.5.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-espree@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.npmjs.org/espree/-/espree-6.2.1.tgz"
-  dependencies:
-    acorn "^7.1.1"
-    acorn-jsx "^5.2.0"
-    eslint-visitor-keys "^1.1.0"
-
-espree@^9.0.0, espree@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-9.2.0.tgz#c50814e01611c2d0f8bd4daa83c369eabba80dbc"
+espree@^9.0.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-9.1.0.tgz#ba9d3c9b34eeae205724124e31de4543d59fbf74"
   dependencies:
     acorn "^8.6.0"
     acorn-jsx "^5.3.1"
     eslint-visitor-keys "^3.1.0"
 
-espree@^9.0.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-9.1.0.tgz#ba9d3c9b34eeae205724124e31de4543d59fbf74"
+espree@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-9.2.0.tgz#c50814e01611c2d0f8bd4daa83c369eabba80dbc"
   dependencies:
     acorn "^8.6.0"
     acorn-jsx "^5.3.1"
@@ -9733,18 +9712,6 @@ vue-client-only@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.1.0.tgz"
 
-vue-eslint-parser@^7.8.0:
-  version "7.8.0"
-  resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-7.8.0.tgz"
-  dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.1.1"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
-    esquery "^1.4.0"
-    lodash "^4.17.21"
-    semver "^6.3.0"
-
 vue-eslint-parser@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.0.1.tgz#25e08b20a414551531f3e19f999902e1ecf45f13"
@@ -9836,17 +9803,19 @@ vue@^2.6.12:
   version "2.6.14"
   resolved "https://registry.npmjs.org/vue/-/vue-2.6.14.tgz"
 
-vuetify-loader@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.npmjs.org/vuetify-loader/-/vuetify-loader-1.7.2.tgz"
+vuetify-loader@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/vuetify-loader/-/vuetify-loader-1.7.3.tgz#404657f4925c828f400fe3269003421d586835c6"
+  integrity sha512-1Kt6Rfvuw3i9BBlxC9WTMnU3WEU7IBWQmDX+fYGAVGpzWCX7oHythUIwPCZGShHSYcPMKSDbXTPP8UvT5RNw8Q==
   dependencies:
     decache "^4.6.0"
     file-loader "^6.2.0"
     loader-utils "^2.0.0"
 
-vuetify@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.npmjs.org/vuetify/-/vuetify-2.5.3.tgz"
+vuetify@^2.6:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.6.3.tgz#b33ede2da958a40c6ced0ad1f4eda737984b3967"
+  integrity sha512-Zfiz2DZnp1DvxqGaSCGqGjv4mPNAurJJ5Xwy7bzNzIySGLlRdlO8UH6aNWnSgfaAsLP3voxadSGDm6tKM8Ys7w==
 
 vuex@^3.6.2:
   version "3.6.2"
