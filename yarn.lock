@@ -2200,7 +2200,7 @@ acorn-globals@^6.0.0:
     acorn "^7.1.1"
     acorn-walk "^7.1.1"
 
-acorn-jsx@^5.2.0, acorn-jsx@^5.3.1:
+acorn-jsx@^5.3.1:
   version "5.3.1"
   resolved "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.1.tgz"
 
@@ -2460,11 +2460,13 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.10.0"
 
-axios@^0.22.0:
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.22.0.tgz#bf702c41fb50fbca4539589d839a077117b79b25"
+axios@^0.27.0:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.1.tgz#badcc8cc38cfa812320221b600776452141ea5d4"
+  integrity sha512-ePNMai55xo5GsXajb/k756AqZqpqeDaGwGcdvbZLSSELbbYwsIn2jNmGfUPEwd8j/yu4OoMstLLIVa4t0MneEA==
   dependencies:
-    follow-redirects "^1.14.4"
+    follow-redirects "^1.14.9"
+    form-data "^4.0.0"
 
 babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -3351,21 +3353,25 @@ contentful-resolve-response@^1.3.0:
   dependencies:
     fast-copy "^2.1.0"
 
-contentful-sdk-core@^6.9.0:
-  version "6.9.1"
-  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.9.1.tgz#e07eebab49c02a6561d2e5a512e50634b4207b35"
+contentful-sdk-core@^7.0.1:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-7.0.2.tgz#5585880f546772246209de25256635ce31fd8d8e"
+  integrity sha512-HkBzzzJ3UGqOIJiTd4qMEMvn44ccrN7a75gEej28X1srGn05myRgJ/pWbmXJhtgpq/5gU7IURnynyKx/ecsOfg==
   dependencies:
-    fast-copy "^2.1.0"
-    lodash "^4.17.21"
+    fast-copy "^2.1.3"
+    lodash.isplainobject "^4.0.6"
+    lodash.isstring "^4.0.1"
+    p-throttle "^4.1.1"
     qs "^6.9.4"
 
-contentful@^9.1.2:
-  version "9.1.2"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-9.1.2.tgz#50d12916c5dad18f6a69cbc4d8ea77d7b4947bfb"
+contentful@^9.1.26:
+  version "9.1.26"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-9.1.26.tgz#c382f9e055c411cac0355da586921d24f3fdcf22"
+  integrity sha512-+3OiUKmRk5a8G+nHc8C9OA6E7NyqkA5GBXAeHT/uHG5enFbhKGuNDSJ3ccNww0atmASFABcMBF2ck617JS7iKg==
   dependencies:
-    axios "^0.22.0"
+    axios "^0.27.0"
     contentful-resolve-response "^1.3.0"
-    contentful-sdk-core "^6.9.0"
+    contentful-sdk-core "^7.0.1"
     fast-copy "^2.1.0"
     json-stringify-safe "^5.0.1"
 
@@ -3743,12 +3749,6 @@ debug@^3.2.7:
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz"
   dependencies:
     ms "^2.1.1"
-
-debug@^4.3.2:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
-  dependencies:
-    ms "2.1.2"
 
 decache@^4.6.0:
   version "4.6.0"
@@ -4273,15 +4273,6 @@ eslint-plugin-unicorn@^39.0.0:
     semver "^7.3.5"
     strip-indent "^3.0.0"
 
-eslint-plugin-vue@^7.9.0:
-  version "7.13.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-7.13.0.tgz"
-  dependencies:
-    eslint-utils "^2.1.0"
-    natural-compare "^1.4.0"
-    semver "^7.3.2"
-    vue-eslint-parser "^7.8.0"
-
 eslint-plugin-vue@^8.1.1:
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-8.1.1.tgz#8bb0a40520880cdd076b4a6faf8bc29110997a8c"
@@ -4318,10 +4309,11 @@ eslint-scope@^7.1.0:
   dependencies:
     esrecurse "^4.3.0"
     estraverse "^5.2.0"
-    
-eslint-template-visitor@^2.2.2:
+
+eslint-template-visitor@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/eslint-template-visitor/-/eslint-template-visitor-2.3.2.tgz#b52f96ff311e773a345d79053ccc78275bbc463d"
+  integrity sha512-3ydhqFpuV7x1M9EK52BPNj6V0Kwu0KKkcIAfpUhwHbR8ocRln/oUHgfxQupY8O1h4Qv/POHDumb/BwwNfxbtnA==
   dependencies:
     "@babel/core" "^7.12.16"
     "@babel/eslint-parser" "^7.12.16"
@@ -4329,7 +4321,7 @@ eslint-template-visitor@^2.2.2:
     esquery "^1.3.1"
     multimap "^1.1.0"
 
-eslint-utils@^2.0.0, eslint-utils@^2.1.0:
+eslint-utils@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/eslint-utils/-/eslint-utils-2.1.0.tgz"
   dependencies:
@@ -4407,25 +4399,17 @@ eslint@^8.5.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-espree@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.npmjs.org/espree/-/espree-6.2.1.tgz"
-  dependencies:
-    acorn "^7.1.1"
-    acorn-jsx "^5.2.0"
-    eslint-visitor-keys "^1.1.0"
-
-espree@^9.0.0, espree@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-9.2.0.tgz#c50814e01611c2d0f8bd4daa83c369eabba80dbc"
+espree@^9.0.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-9.1.0.tgz#ba9d3c9b34eeae205724124e31de4543d59fbf74"
   dependencies:
     acorn "^8.6.0"
     acorn-jsx "^5.3.1"
     eslint-visitor-keys "^3.1.0"
 
-espree@^9.0.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-9.1.0.tgz#ba9d3c9b34eeae205724124e31de4543d59fbf74"
+espree@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-9.2.0.tgz#c50814e01611c2d0f8bd4daa83c369eabba80dbc"
   dependencies:
     acorn "^8.6.0"
     acorn-jsx "^5.3.1"
@@ -4602,9 +4586,10 @@ extract-from-css@^0.4.4:
   dependencies:
     css "^2.1.0"
 
-fast-copy@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/fast-copy/-/fast-copy-2.1.1.tgz"
+fast-copy@^2.1.0, fast-copy@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-2.1.3.tgz#bf6e05ac3cb7a9d66fbf12c51dd4440e9ddd4afb"
+  integrity sha512-LDzYKNTHhD+XOp8wGMuCkY4eTxFZOOycmpwLBiuF3r3OjOmZnURRD8t2dUAbmKuXGbo/MGggwbSjcBdp8QT0+g==
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -4775,9 +4760,10 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.14.1"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.1.tgz"
 
-follow-redirects@^1.14.4:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
+follow-redirects@^1.14.9:
+  version "1.14.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
+  integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -4804,6 +4790,15 @@ fork-ts-checker-webpack-plugin@^6.1.1:
 form-data@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/form-data/-/form-data-3.0.1.tgz"
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
+
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
@@ -6439,6 +6434,16 @@ lodash.difference@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.difference/-/lodash.difference-4.5.0.tgz"
 
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+  integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
+
+lodash.isstring@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
+  integrity sha1-1SfftUVuynzJu5XV2ur4i6VKVFE=
+
 lodash.kebabcase@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz"
@@ -7256,6 +7261,11 @@ p-map@^4.0.0:
   resolved "https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz"
   dependencies:
     aggregate-error "^3.0.0"
+
+p-throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/p-throttle/-/p-throttle-4.1.1.tgz#80b1fbd358af40a8bfa1667f9dc8b72b714ad692"
+  integrity sha512-TuU8Ato+pRTPJoDzYD4s7ocJYcNSEZRvlxoq3hcPI2kZDZ49IQ1Wkj7/gDJc3X7XiEAAvRGtDzdXJI0tC3IL1g==
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -9732,18 +9742,6 @@ vue-analytics@^5.22.1:
 vue-client-only@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.1.0.tgz"
-
-vue-eslint-parser@^7.8.0:
-  version "7.8.0"
-  resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-7.8.0.tgz"
-  dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.1.1"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
-    esquery "^1.4.0"
-    lodash "^4.17.21"
-    semver "^6.3.0"
 
 vue-eslint-parser@^8.0.1:
   version "8.0.1"
