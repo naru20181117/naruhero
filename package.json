@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/moment": "^1.6.1",
-    "contentful": "^9.1.2",
+    "contentful": "^9.1.29",
     "core-js": "^3.22.7",
     "markdown-it-br": "^1.0.0",
     "markdown-it-link-attributes": "^4.0.0",
