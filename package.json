@@ -19,7 +19,7 @@
     "contentful": "^9.1.2",
     "core-js": "^3.22.7",
     "markdown-it-br": "^1.0.0",
-    "markdown-it-link-attributes": "^3.0.0",
+    "markdown-it-link-attributes": "^4.0.0",
     "moment": "^2.29.1",
     "nuxt": "^2.15.8",
     "reveal.js": "^4.3.0"
